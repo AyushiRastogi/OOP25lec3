@@ -10,4 +10,9 @@ public class Book extends Product {
         this.author = author;
         this.publishDate = publishDate;
     }
+    @Override
+    public double getProductPrice() {
+
+        return productPrice * 0.9;
+    }
 }

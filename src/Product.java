@@ -18,6 +18,9 @@ public abstract class Product {
     public double getProductPrice() {
         return productPrice;
     }
+    public double getProductPrice(double discount) {
+        return productPrice-productPrice*discount;
+    }
     public void setProductPrice(double productPrice) {
         this.productPrice = productPrice;
     }
