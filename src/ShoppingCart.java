@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
+// This is how the new ShoppingCart looks. Refer to lecture 2 code for the previous version
 public class ShoppingCart {
     private List<Product> products;
 
@@ -30,5 +31,14 @@ public class ShoppingCart {
             total+=product.productPrice;
         }
         return total;
+    }
+
+    // list of items to be delivered
+    public void listItemsToBeDelivered(){
+        for (Product product: products){
+            if (!(product instanceof Downloadable)){
+                System.out.println("item: " + product.productName);
+            }
+        }
     }
 }
